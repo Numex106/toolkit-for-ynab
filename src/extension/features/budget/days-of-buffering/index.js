@@ -90,7 +90,10 @@ export class DaysOfBuffering extends Feature {
         'title',
         `${l10n('toolkit.dob.outflow', 'Total outflow')}: ${formatCurrency(totalOutflow)}
 ${l10n('toolkit.dob.days', 'Total days of budgeting')}: ${availableDates}
-${l10n('toolkit.dob.avgOutflow', 'Average daily outflow')}: ~${formatCurrency(averageDailyOutflow)}`
+${l10n('toolkit.dob.avgOutflow', 'Average daily outflow')}: ~${formatCurrency(averageDailyOutflow)}
+${l10n('toolkit.dob.avgMonthlyOutflow', 'Average monthly outflow')}: ~${formatCurrency(
+          averageDailyOutflow * 30.4
+        )}`
       );
 
       // #1475 - add an event listener to $displayElement to show the date on mouseover
